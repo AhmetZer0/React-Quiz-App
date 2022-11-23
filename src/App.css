@@ -1,0 +1,142 @@
+.App {
+  text-align: center;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.Quizlet{
+  height:550px;
+  width:550px;
+  margin-top:218px;
+  margin-left:30%;
+
+}
+.Quizlet h1{
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 31.25px;
+  line-height: 37px;
+  text-align: center;
+  color: #293264;
+}
+.Quizlet p{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #293264;
+  }
+.Quizlet button{
+  height:52px;
+  width:193px;
+  border-radius:15px;
+  background-color:#4D5B9E;
+  border:0px;
+  color:white;
+  cursor:pointer;
+  
+}
+
+.question{
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #293264;
+  width: 500px;
+  height: auto;
+  margin-left:35%;
+  margin-top:20px;
+}
+.answers{
+  margin-top:20px;
+  width:600px;
+  align-content: center;
+  align-items:center;
+  display:flex;
+  margin-left:31%;
+  max-width: 1200px;
+
+}
+.answer{
+  box-sizing: border-box;
+  border: 0.794239px solid #4D5B9E;
+  border-radius: 7.94239px;
+  width:150px;
+  float:left;
+  margin-right:5px;
+  margin-top:30px;
+  background-color: white;
+  cursor: pointer;
+  align-self: center;
+  height: auto;
+  border:0.5px solid #4D5B9E;
+}
+.answerSelected{
+  box-sizing: border-box;
+  border: 0.794239px solid #4D5B9E;
+  border-radius: 7.94239px;
+  width:135.74px;
+  margin-top:30px;
+  float:left;
+  margin-right:auto;
+  background: #D6DBF5;
+  cursor: pointer;
+  border:0.5px solid #4D5B9E;
+  height: auto;
+}
+hr{
+  width:399px;
+  margin-top:15px;
+  border: 0.794239px solid #DBDEF0;
+}
+.checkAnswer{
+  
+  width: 120px;
+  height: 35px;
+  background: #4D5B9E;
+  color:#F5F7FB;
+  border:0px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 12px;
+  text-align: center;
+  font-family: 'Inter';
+  margin-top:20px;
+}
