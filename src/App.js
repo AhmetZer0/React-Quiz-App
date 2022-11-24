@@ -9,18 +9,17 @@ export default function App() {
   const [correctAnswers,setCorrectAnswers] = React.useState([])
   const [count,setCount] = React.useState(false)
   const [newQuiz,setNewQuiz] = React.useState(false)
+  const [noOfQ, setNoOfQ] = React.useState(1)
   
   // set quiz state when button have been clicked.
-  function changeState(){
-    if (!quiz){
-
-    }
+  function changeState(val){
+    setNoOfQ(val["selectedVal"])
     setQuiz(!quiz)
   }
 
   // Fetch api and set data state to the data we get from api. 
   useEffect(() => {
-    fetch(`https://opentdb.com/api.php?amount=3&category=18&type=multiple`)
+    fetch(`https://opentdb.com/api.php?amount=${noOfQ}&category=18&type=multiple`)
     .then((response) => response.json())
     .then((actualData) => setData(prevQuiz => {
       function shuffleArray(inc){
@@ -138,9 +137,10 @@ export default function App() {
                 value:oldData[i].answers[x].value,
                 isHeld:"correct"
               })
-              if (oldData[i].answers[oldData[i].selected].value===correctAnswers[i]){
-                currCount ++;
-              }}
+              if (oldData[i].selected !=="empty"){
+                if (oldData[i].answers[oldData[i].selected].value===correctAnswers[i]){
+                  currCount ++;
+              }}}
             
             else if (oldData[i].answers[x].value !== correctAnswers[i] && oldData[i].selected === x){
               
